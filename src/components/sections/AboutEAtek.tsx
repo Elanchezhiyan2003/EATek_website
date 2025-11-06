@@ -87,9 +87,9 @@ export function AboutEAtek() {
           transition={{ duration: 0.6 }}
           className="inline-block mb-4"
         >
-          <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+          {/* <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
             About
-          </span>
+          </span> */}
         </motion.div>
         
         <motion.h2

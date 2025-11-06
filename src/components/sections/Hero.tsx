@@ -41,8 +41,12 @@ const floatingVariants = {
 export function Hero() {
   const bgRef = useRef<HTMLDivElement>(null);
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
     // Animate background gradients
     if (bgRef.current) {
       gsap.to(bgRef.current.children, {
@@ -77,9 +81,9 @@ export function Hero() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <section className="relative overflow-hidden  min-h-screen max-h-20 flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/20">
@@ -118,21 +122,21 @@ export function Hero() {
 
             <motion.h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight"
-              variants={itemVariants}
+              variants={prefersReducedMotion ? undefined : itemVariants}
             >
               <motion.span
                 className="block text-slate-900 dark:text-slate-50"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={prefersReducedMotion ? undefined : { opacity: 0, y: 30 }}
+                animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+                transition={prefersReducedMotion ? undefined : { duration: 0.8, delay: 0.2 }}
               >
                 Beyond the
               </motion.span>
               <motion.span
                 className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent bg-[length:200%_auto]"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                initial={prefersReducedMotion ? undefined : { opacity: 0, y: 30 }}
+                animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+                transition={prefersReducedMotion ? undefined : { duration: 0.8, delay: 0.4 }}
               >
                 Binary
               </motion.span>
@@ -140,7 +144,7 @@ export function Hero() {
             
             <motion.p
               className="mx-auto mt-4 max-w-2xl text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
-              variants={itemVariants}
+              variants={prefersReducedMotion ? undefined : itemVariants}
             >
               Bridging Education, Art, Technology, and Emotion to create transformative digital experiences. 
               We build the future through innovative SaaS solutions, creative commerce, and educational programs.
@@ -148,7 +152,7 @@ export function Hero() {
             
             <motion.div
               className="mt-12 flex items-center justify-center gap-4 flex-wrap"
-              variants={itemVariants}
+              variants={prefersReducedMotion ? undefined : itemVariants}
             >
               <motion.div whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}>
                 <Button

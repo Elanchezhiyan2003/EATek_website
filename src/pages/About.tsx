@@ -34,6 +34,7 @@ import {
   Share2
 } from 'lucide-react';
 import FAQ from '@/components/FAQ';
+import ProfileCard from '@/components/ProfileCard';
 
 // Lightweight fallback for react-parallax-tilt when the package isn't installed.
 // If you prefer the real behavior, run: npm install react-parallax-tilt --save
@@ -553,7 +554,7 @@ export default function About() {
                 whileHover={{ scale: 1.03, rotateX: 3, rotateY: -3 }}
                 className={`group relative bg-gradient-to-br ${card.gradient} p-[2px] rounded-3xl shadow-[0_0_40px_rgba(0,0,0,0.4)]`}
               >
-                <div className="bg-slate-950 rounded-3xl p-8 sm:p-10 transition-all duration-300 group-hover:bg-opacity-80">
+                <div className="bg-white-950 rounded-3xl p-8 sm:p-10 transition-all duration-300 group-hover:bg-opacity-80">
                   <div className="flex justify-center mb-6">
                     <div className="bg-gradient-to-br from-white/20 to-white/5 rounded-full p-4 shadow-lg">
                       {card.icon}
@@ -562,7 +563,7 @@ export default function About() {
                   <h3 className="text-2xl font-semibold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
                     {card.title}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed">{card.desc}</p>
+                  <p className="text-white leading-relaxed">{card.desc}</p>
                 </div>
               </motion.div>
             </Tilt>
@@ -647,13 +648,14 @@ export default function About() {
       </div>
     </section>
 
-    <section className="bg-gradient-to-b from-[#0a0f1f] to-[#141a2e] py-20 px-6 md:px-16 text-white">
+    {/* <section className="bg-gradient-to-b from-[#0a0f1f] to-[#141a2e] py-20 px-6 md:px-16 text-white"> */}
+    <section className="bg-slte-100 py-20 px-6 md:px-16 text-white">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold font-poppins bg-gradient-to-r from-[#40ffaa] via-[#4079ff] to-[#40ffaa] bg-clip-text text-transparent mb-10">
           Culture & Values
         </h2>
 
-        <p className="text-gray-300 text-lg md:text-xl w-[80%] mx-auto leading-relaxed mb-14">
+        <p className="text-black text-lg md:text-xl w-[80%] mx-auto leading-relaxed mb-14">
           At <span className="text-[#40ffaa] font-semibold">EAtek</span>, culture isn’t an afterthought — it’s the framework behind how we think, build, and grow.  
           We believe in creating with purpose, learning with empathy, and innovating beyond the binary.
         </p>
@@ -679,7 +681,8 @@ export default function About() {
 
       {/* Synchronicity Framework */}
 
-       <section className="py-20 bg-gradient-to-b from-[#0a0f1c] to-[#101827] text-white text-center">
+       {/* <section className="py-20 bg-gradient-to-b from-[#0a0f1c] to-[#101827] text-white text-center"> */}
+       <section className="py-20 bg-slate-100 text-white text-center">
       <motion.h2
         className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-green-400 bg-clip-text text-transparent"
         initial={{ opacity: 0, y: 20 }}
@@ -690,7 +693,7 @@ export default function About() {
       </motion.h2>
 
       <motion.p
-        className="text-lg md:text-xl max-w-2xl mx-auto mb-16 text-gray-300"
+        className="text-lg md:text-xl max-w-2xl mx-auto mb-16 text-black"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3 }}
@@ -711,11 +714,166 @@ export default function About() {
           >
             <div className="flex justify-center mb-4">{item.icon}</div>
             <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-            <p className="text-gray-400">{item.desc}</p>
+            <p className="text-white">{item.desc}</p>
           </motion.div>
         ))}
       </div>
     </section>
+
+      {/* Founder Profile Section */}
+      <section className="relative py-24 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950 overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 right-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-4">
+              Meet the Founders
+            </h2>
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              The visionary behind EAtek's mission to bridge technology, creativity, and education
+            </p>
+          </motion.div>
+
+          {/* Founder Content Grid */}
+          <div className="grid lg:grid-cols-1 gap-12 lg:gap-16 items-center">
+            {/* Profile Card */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex justify-center lg:justify-end"
+            >
+              <ProfileCard
+                name="Elanchezhiyan Mahendiran"
+                title="Founder & CEO"
+                handle="elanchezhiyan"
+                status="Online"
+                contactText="Get in Touch"
+                avatarUrl="/profile.png"
+                showUserInfo={true}
+                enableTilt={true}
+                onContactClick={() => {
+                  window.location.href = '/contact';
+                }}
+                socials={{
+                  github: 'https://github.com',
+                  linkedin: 'https://linkedin.com',
+                  twitter: 'https://twitter.com',
+                  email: 'contact@eatek.ai',
+                }}
+              />
+              <ProfileCard
+                name="Asmiya Bincy"
+                title="Co-Founder & MD"
+                handle="elanchezhiyan"
+                status="Online"
+                contactText="Get in Touch"
+                avatarUrl="/Asmiya.png"
+                showUserInfo={true}
+                enableTilt={true}
+                onContactClick={() => {
+                  window.location.href = '/contact';
+                }}
+                socials={{
+                  github: 'https://github.com',
+                  linkedin: 'https://linkedin.com',
+                  twitter: 'https://twitter.com',
+                  email: 'contact@eatek.ai',
+                }}
+              />
+            </motion.div>
+
+            {/* Founder Bio & Quote */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              <div className="relative">
+                <div className="absolute -top-4 -left-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
+                <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200/50 dark:border-slate-700/50 shadow-xl">
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-1 h-full bg-gradient-to-b from-blue-500 to-purple-500 rounded-full" />
+                    <div>
+                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                        Visionary Leader
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Elanchezhiyan Mahendiran founded EAtek with a clear vision: to create a space where 
+                        technology, creativity, and education converge. His passion for empowering learners and 
+                        creators drives EAtek's mission to build ecosystems that move both the mind and the heart.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quote */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="relative bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-blue-200/50 dark:border-blue-800/50"
+              >
+                <div className="absolute top-4 left-4 text-6xl text-blue-500/20 dark:text-blue-400/20 font-serif">"</div>
+                <blockquote className="relative text-lg md:text-xl italic text-slate-700 dark:text-slate-200 leading-relaxed pl-8">
+                  Beyond the Binary isn't just our tagline — it's our philosophy. We believe in creating 
+                  solutions that transcend traditional boundaries, where art meets code, education meets innovation, 
+                  and every project carries a soul.
+                </blockquote>
+                <div className="mt-4 flex items-center gap-3 pl-8">
+                  <div className="w-12 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500" />
+                  <p className="text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    Elanchezhiyan Mahendiran
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Key Achievements */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-2 gap-4"
+              >
+                <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200/50 dark:border-slate-700/50">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+                    2024
+                  </div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    Founded EAtek
+                  </div>
+                </div>
+                <div className="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200/50 dark:border-slate-700/50">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+                    ELAN 20'
+                  </div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                    BuildVerse Fellowship
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
@@ -818,7 +976,7 @@ export default function About() {
       </section> */}
 
       {/* Core Team */}
-      <section className="py-24 sm:py-32">
+      {/* <section className="py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -855,7 +1013,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
   {/* FAQ Section */}
   <FAQ />

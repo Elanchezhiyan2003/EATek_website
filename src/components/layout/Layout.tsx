@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollToTop } from "./ScrollToTop";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pageVariants = {
@@ -31,6 +32,7 @@ export function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <ScrollProgress />
       <Header />
       <AnimatePresence mode="wait">

@@ -22,11 +22,33 @@ import {
   Beaker,
   Compass,
   Cpu,
-  Cloud
+  Cloud,
+   Github,
+    Linkedin, 
+    Twitter, 
+    Mail
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ScrollStack from '@/components/ScrollStack';
 
-
+interface ProfileCardProps {
+  name: string;
+  title: string;
+  handle?: string;
+  status?: string;
+  contactText?: string;
+  avatarUrl?: string;
+  showUserInfo?: boolean;
+  enableTilt?: boolean;
+  enableMobileTilt?: boolean;
+  onContactClick?: () => void;
+  socials?: {
+    github?: string;
+    linkedin?: string;
+    twitter?: string;
+    email?: string;
+  };
+}
 
   const projects = [
     {
@@ -189,7 +211,7 @@ export default function Services() {
     <div className="min-h-screen">
       {/* Hero Section */}
   
-      
+     
       <section className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/20">
         {/* Modern background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
@@ -489,7 +511,7 @@ export default function Services() {
         </div>
       </section>
 
-      <main className="w-full overflow-hidden">
+      {/* <main className="w-full overflow-hidden">
       {projects.map((project, index) => (
         <motion.section
           key={project.id}
@@ -502,29 +524,29 @@ export default function Services() {
           }}
           viewport={{ once: true, amount: 0.3 }}
           className={`min-h-screen flex flex-col items-center justify-center bg-gradient-to-br ${project.bgColor} text-white relative`}
-        >
+        > */}
           {/* Faint background text */}
-          <h1 className="absolute top-28 left-12 sm:left-20 text-[6rem] sm:text-[9rem] font-bold opacity-20 select-none leading-none">
+          {/* <h1 className="absolute top-28 left-12 sm:left-20 text-[6rem] sm:text-[9rem] font-bold opacity-20 select-none leading-none">
             {project.name}
-          </h1>
+          </h1> */}
 
           {/* Subtitle */}
-          <h3 className="text-lg sm:text-2xl mb-6 font-light tracking-wide">
+          {/* <h3 className="text-lg sm:text-2xl mb-6 font-light tracking-wide">
             Our Work
-          </h3>
+          </h3> */}
 
           {/* Image preview */}
-          <div className="shadow-2xl rounded-2xl overflow-hidden w-[85%] md:w-[65%] max-w-5xl">
+          {/* <div className="shadow-2xl rounded-2xl overflow-hidden w-[85%] md:w-[65%] max-w-5xl">
             <img
               src={project.img}
               alt={project.name}
               loading="lazy"
               className="rounded-2xl object-cover w-full h-[45vh] md:h-[55vh]"
             />
-          </div>
+          </div> */}
 
           {/* Action buttons */}
-          <div className="mt-10 flex flex-col items-center space-y-4">
+          {/* <div className="mt-10 flex flex-col items-center space-y-4">
             <Button
               className={`${project.btnColor} font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-md transition-all duration-300`}
             >
@@ -537,10 +559,10 @@ export default function Services() {
             >
               View All Projects
             </a>
-          </div>
-        </motion.section>
+          </div> */}
+        {/* </motion.section>
       ))}
-    </main>
+    </main> */}
 
       {/* Why Choose EAtek */}
       <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
@@ -597,6 +619,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+ 
 
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">

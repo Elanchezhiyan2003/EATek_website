@@ -1,15 +1,17 @@
+import React, { Suspense, lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
-import Index from "./pages/index";
-import About from "./pages/About";
-import Products from "./pages/Products";
-import Programs from "./pages/Programs";
-import Services from "./pages/Services";
-import Community from "./pages/Community";
-import Insights from "./pages/Insights";
-import Careers from "./pages/Careers";
-import Contact from "./pages/Contact";
-import NotFound from "./pages/NotFound";
+
+const Index = lazy(() => import("./pages/index"));
+const About = lazy(() => import("./pages/About"));
+const Products = lazy(() => import("./pages/Products"));
+const Programs = lazy(() => import("./pages/Programs"));
+const Services = lazy(() => import("./pages/Services"));
+const Community = lazy(() => import("./pages/Community"));
+const Insights = lazy(() => import("./pages/Insights"));
+const Careers = lazy(() => import("./pages/Careers"));
+const Contact = lazy(() => import("./pages/Contact"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const routes = [
   {
@@ -18,43 +20,83 @@ const routes = [
     children: [
       {
         index: true,
-        element: <Index />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Index />
+          </Suspense>
+        ),
       },
       {
         path: "about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "products",
-        element: <Products />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Products />
+          </Suspense>
+        ),
       },
       {
         path: "programs",
-        element: <Programs />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Programs />
+          </Suspense>
+        ),
       },
       {
         path: "services",
-        element: <Services />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Services />
+          </Suspense>
+        ),
       },
       {
         path: "community",
-        element: <Community />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Community />
+          </Suspense>
+        ),
       },
       {
         path: "insights",
-        element: <Insights />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Insights />
+          </Suspense>
+        ),
       },
       {
         path: "careers",
-        element: <Careers />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Careers />
+          </Suspense>
+        ),
       },
       {
         path: "contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "*",
-        element: <NotFound />,
+        element: (
+          <Suspense fallback={<div className="p-8 text-center">Loading...</div>}>
+            <NotFound />
+          </Suspense>
+        ),
       },
     ],
   },

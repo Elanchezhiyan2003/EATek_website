@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star, Quote } from 'lucide-react';
+import {TestimonialsSection} from '@/components/testimonials-with-marquee'
 
 const testimonials = [
   {
@@ -29,6 +30,7 @@ const testimonials = [
   },
 ];
 
+
 const impactStats = [
   { label: 'Students Mentored', value: '500+', description: 'Across various programs' },
   { label: 'Projects Completed', value: '150+', description: 'Real-world applications' },
@@ -40,7 +42,7 @@ export function CommunityImpact() {
   return (
     <section className="py-24 sm:py-32 bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        {/* <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Community & Impact
           </h2>
@@ -48,10 +50,10 @@ export function CommunityImpact() {
             Building a community of innovators, creators, and changemakers who are 
             shaping the future of technology and education.
           </p>
-        </div>
+        </div> */}
 
         {/* Impact Stats */}
-        <div className="mx-auto mt-16 max-w-5xl">
+        {/* <div className="mx-auto mt-16 max-w-5xl">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {impactStats.map((stat) => (
               <Card key={stat.label} className="text-center border-0 shadow-md">
@@ -65,10 +67,26 @@ export function CommunityImpact() {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Testimonials */}
-        <div className="mx-auto mt-20 max-w-6xl">
+      {/* <TestimonialsSection title="Community Testimonials" description="What our participants and partners say about EAtek" testimonials={testimonials.map(t => ({ author: { name: t.name, role: t.role, company: t.company, image: t.image }, text: t.content }))}> */}
+<TestimonialsSection
+  title="Community Testimonials"
+  description="What our participants and partners say about EAtek"
+  testimonials={testimonials.map(t => ({
+    author: {
+      name: t.name,
+      role: t.role,
+      company: t.company,
+      handle: t.name.split(' ').map(n => n[0]).join('').toLowerCase(), // example handle
+      avatar: t.image, // use image as avatar
+    },
+    text: t.content,
+  }))}
+/>
+
+        {/* <div className="mx-auto mt-20 max-w-6xl">
           <h3 className="text-2xl font-bold text-center mb-12">What Our Community Says</h3>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             {testimonials.map((testimonial) => (
@@ -104,7 +122,7 @@ export function CommunityImpact() {
               </Card>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
