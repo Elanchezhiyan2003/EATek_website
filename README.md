@@ -1,8 +1,15 @@
-# Welcome to your Altan project
+# EAtek - Beyond The Binary
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules
+Official website for EAtek - Education, Art, Technology, and Emotion Kinetics.
 
-Start by editing src/pages/index.tsx
+Building soulful technology that bridges innovation and human connection.
+
+## Tech Stack
+- React + TypeScript
+- Vite
+- TailwindCSS
+- Framer Motion
+- shadcn/ui
 
 Core Sturcture:
 Header:

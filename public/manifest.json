@@ -1,11 +1,11 @@
 {
-  "name": "Altan",
-  "short_name": "Altan",
-  "description": "Altan Application",
+  "name": "EAtek - Beyond The Binary",
+  "short_name": "EAtek",
+  "description": "EAtek - Education, Art, Technology, and Emotion Kinetics. Building soulful technology that bridges innovation and human connection.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#0a0f1f",
+  "theme_color": "#40ffaa",
   "icons": [
     {
       "src": "/favicon/android/android-launchericon-192-192.png",
