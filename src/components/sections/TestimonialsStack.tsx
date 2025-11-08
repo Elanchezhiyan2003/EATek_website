@@ -58,65 +58,84 @@ const TESTIMONIALS = [
 
 export function TestimonialsStack() {
   return (
-    <section className="bg-accent/30 px-8 py-12">
-      <div>
-        <h2 className="text-center text-4xl font-semibold">Community Testimonials</h2>
-        <p className="mx-auto mt-2 max-w-lg text-center text-sm text-muted-foreground">
-          Hear from our community members about their transformative experiences with EAtek's programs and initiatives.
-        </p>
-      </div>
-      <ContainerScroll className="container h-[300vh]">
-        <div className="sticky left-0 top-0 h-svh w-full py-12">
-          <CardsContainer className="mx-auto size-full h-[450px] w-[350px]">
-            {TESTIMONIALS.map((testimonial, index) => (
-              <CardTransformed
-                arrayLength={TESTIMONIALS.length}
-                key={testimonial.id}
-                variant="light"
-                index={index + 2}
-                role="article"
-                aria-labelledby={`card-${testimonial.id}-title`}
-                aria-describedby={`card-${testimonial.id}-content`}
-              >
-                <div className="flex flex-col items-center space-y-4 text-center">
-                  <ReviewStars
-                    className="text-primary"
-                    rating={testimonial.rating}
+   <section className="bg-accent/30 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+  <div className="max-w-7xl mx-auto text-center">
+    {/* Heading Section */}
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-5">
+      Community Testimonials
+    </h2>
+    <p className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground mb-10 sm:mb-12 px-4 sm:px-0">
+      Hear from our community members about their transformative experiences
+      with <span className="font-semibold text-primary">EAtek’s</span> programs
+      and initiatives.
+    </p>
+  </div>
+
+  {/* Testimonials Scroll Section */}
+  <div className="max-w-6xl mx-auto relative">
+    <ContainerScroll className="container h-[300vh]">
+      <div className="sticky top-10 flex justify-center items-center h-[100vh] sm:h-[80vh]">
+        <CardsContainer className="flex justify-center items-center mx-auto w-[90%] sm:w-[340px] md:w-[360px] lg:w-[400px] h-[380px] sm:h-[420px] md:h-[450px]">
+          {TESTIMONIALS.map((testimonial, index) => (
+            <CardTransformed
+              key={testimonial.id}
+              variant="light"
+              index={index + 2}
+              arrayLength={TESTIMONIALS.length}
+              role="article"
+              aria-labelledby={`card-${testimonial.id}-title`}
+              aria-describedby={`card-${testimonial.id}-content`}
+            >
+              {/* Review Content */}
+              <div className="flex flex-col items-center text-center space-y-4 sm:space-y-5">
+                <ReviewStars
+                  className="text-primary scale-90 sm:scale-100"
+                  rating={testimonial.rating}
+                />
+                <blockquote
+                  id={`card-${testimonial.id}-content`}
+                  className="text-base sm:text-lg italic text-muted-foreground px-3 sm:px-0"
+                >
+                  “{testimonial.description}”
+                </blockquote>
+              </div>
+
+              {/* Avatar + Details */}
+              <div className="flex items-center justify-center gap-3 sm:gap-4 mt-5">
+                <Avatar className="!size-10 sm:!size-12 border border-stone-300">
+                  <AvatarImage
+                    src={testimonial.avatarUrl}
+                    alt={`Portrait of ${testimonial.name}`}
                   />
-                  <div className="mx-auto w-4/5 text-lg">
-                    <blockquote cite="#">"{testimonial.description}"</blockquote>
-                  </div>
+                  <AvatarFallback>
+                    {testimonial.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="text-left">
+                  <span
+                    id={`card-${testimonial.id}-title`}
+                    className="block text-base sm:text-lg font-semibold tracking-tight md:text-xl"
+                  >
+                    {testimonial.name}
+                  </span>
+                  <span className="block text-xs sm:text-sm text-muted-foreground">
+                    {testimonial.profession}
+                  </span>
+                  <span className="block text-xs text-muted-foreground">
+                    {testimonial.company}
+                  </span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <Avatar className="!size-12 border border-stone-300">
-                    <AvatarImage
-                      src={testimonial.avatarUrl}
-                      alt={`Portrait of ${testimonial.name}`}
-                    />
-                    <AvatarFallback>
-                      {testimonial.name
-                        .split(" ")
-                        .map((n) => n[0])
-                        .join("")}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <span className="block text-lg font-semibold tracking-tight md:text-xl">
-                      {testimonial.name}
-                    </span>
-                    <span className="block text-sm text-muted-foreground">
-                      {testimonial.profession}
-                    </span>
-                    <span className="block text-xs text-muted-foreground">
-                      {testimonial.company}
-                    </span>
-                  </div>
-                </div>
-              </CardTransformed>
-            ))}
-          </CardsContainer>
-        </div>
-      </ContainerScroll>
-    </section>
+              </div>
+            </CardTransformed>
+          ))}
+        </CardsContainer>
+      </div>
+    </ContainerScroll>
+  </div>
+</section>
+
   )
 }

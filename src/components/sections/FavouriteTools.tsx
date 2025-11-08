@@ -62,7 +62,7 @@ const allTools: string[] = [
 
 const FavouriteTools: React.FC = () => {
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 via-white to-orange-50 py-20 px-4 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-orange-50 via-white to-orange-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -73,25 +73,25 @@ const FavouriteTools: React.FC = () => {
 
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold mb-4">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16">
+          <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-orange-100 text-orange-600 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
             Our Technology Ecosystem
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Built with <span className="text-orange-500">Modern Tools</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             At EAtek, we harness cutting-edge technologies to deliver innovative solutions 
             that empower education and drive technological excellence.
           </p>
         </div>
 
         {/* Horizontal Marquee Rows */}
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {/* First Row - Left to Right */}
           <div className="relative overflow-hidden">
             <motion.div
-              className="flex gap-8"
+              className="flex gap-4 sm:gap-6 lg:gap-8"
               animate={{
                 x: [0, -1920],
               }}
@@ -107,7 +107,7 @@ const FavouriteTools: React.FC = () => {
               {[...allTools, ...allTools, ...allTools].map((src, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-20 h-20 bg-white rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-2.5 sm:p-3 lg:p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
                 >
                   <img
                     src={src}
@@ -122,7 +122,7 @@ const FavouriteTools: React.FC = () => {
           {/* Second Row - Right to Left */}
           <div className="relative overflow-hidden">
             <motion.div
-              className="flex gap-8"
+              className="flex gap-4 sm:gap-6 lg:gap-8"
               animate={{
                 x: [-1920, 0],
               }}
@@ -138,7 +138,7 @@ const FavouriteTools: React.FC = () => {
               {[...allTools, ...allTools, ...allTools].reverse().map((src, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-20 h-20 bg-white rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-2.5 sm:p-3 lg:p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
                 >
                   <img
                     src={src}
@@ -153,7 +153,7 @@ const FavouriteTools: React.FC = () => {
           {/* Third Row - Left to Right (Slower) */}
           <div className="relative overflow-hidden">
             <motion.div
-              className="flex gap-8"
+              className="flex gap-4 sm:gap-6 lg:gap-8"
               animate={{
                 x: [0, -1920],
               }}
@@ -169,7 +169,7 @@ const FavouriteTools: React.FC = () => {
               {[...allTools, ...allTools, ...allTools].map((src, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 w-20 h-20 bg-white rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white rounded-xl sm:rounded-2xl shadow-md hover:shadow-xl border border-orange-100 flex items-center justify-center p-2.5 sm:p-3 lg:p-4 transition-all duration-300 hover:scale-110 hover:border-orange-300"
                 >
                   <img
                     src={src}
@@ -183,8 +183,8 @@ const FavouriteTools: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+        <div className="text-center mt-10 sm:mt-12 lg:mt-16">
+          <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white rounded-full px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
             Explore Our Tech Stack
           </Button>
         </div>
