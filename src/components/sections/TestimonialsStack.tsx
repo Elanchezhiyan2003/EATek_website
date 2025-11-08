@@ -58,10 +58,10 @@ const TESTIMONIALS = [
 
 export function TestimonialsStack() {
   return (
-   <section className="bg-accent/30 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
-  <div className="max-w-7xl mx-auto text-center">
+   <section className="bg-accent/30 py-12  sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+  <div className=" sticky top-20 z-10 sm:top-20 mb-8 sm:mb-12 md:mb-16 px-4 sm:px-0 max-w-5xl mx-auto text-center">
     {/* Heading Section */}
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-5">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-2 sm:mb-2">
       Community Testimonials
     </h2>
     <p className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground mb-10 sm:mb-12 px-4 sm:px-0">
@@ -72,9 +72,9 @@ export function TestimonialsStack() {
   </div>
 
   {/* Testimonials Scroll Section */}
-  <div className="max-w-6xl mx-auto relative">
+  <div className="max-w-7xl mx-auto relative">
     <ContainerScroll className="container h-[300vh]">
-      <div className="sticky top-10 flex justify-center items-center h-[100vh] sm:h-[80vh]">
+      <div className="sticky top-24 z-10 flex justify-center items-center h-[100vh] sm:h-[80vh]">
         <CardsContainer className="flex justify-center items-center mx-auto w-[90%] sm:w-[340px] md:w-[360px] lg:w-[400px] h-[380px] sm:h-[420px] md:h-[450px]">
           {TESTIMONIALS.map((testimonial, index) => (
             <CardTransformed
