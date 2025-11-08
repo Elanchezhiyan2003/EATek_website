@@ -332,9 +332,8 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-{/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 py-24 sm:py-32 overflow-hidden"> */}
-{/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden py-46"> */}
-<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden flex items-center justify-center py-10 md:h-full min-h-[65vh] sm:w-[80vw] md:w-full">
+<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 py-24 lg:py-[23%] sm:py-46 md:py-[14%]  overflow-hidden">
+{/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden py-40 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24  z-0 top-0 md:h-full min-h-screen sm:w-[90vw] md:w-full"> */}
   {/* Background Grid Overlay */}
     {/* <div className="absolute inset-0 -z-10">
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800/20 opacity-40" />
@@ -540,7 +539,7 @@ export default function About() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-4 text-gray-300 text-lg max-w-2xl mx-auto"
+          className="mt-4 text-gray-900 text-lg max-w-2xl mx-auto"
         >
           EAtek stands at the intersection of design, technology, and empathy — crafting digital ecosystems that move the mind and heart.
         </motion.p>

@@ -76,7 +76,7 @@ export function AboutEAtek() {
     //   </div>
     // </section>
     //  <section className="relative bg-gradient-to-b from-[#0F172A] via-[#111827] to-[#0B1120] text-white py-20 px-6 md:px-16">
-    <section className="relative py-20 top sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
+    <section className="relative py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950"> 
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]" />
       
