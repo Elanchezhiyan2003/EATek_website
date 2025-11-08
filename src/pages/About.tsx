@@ -333,7 +333,8 @@ export default function About() {
     <div className="min-h-screen">
       {/* Hero Section */}
 {/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 py-24 sm:py-32 overflow-hidden"> */}
-<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden py-46">
+{/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden py-46"> */}
+<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden flex items-center justify-center py-10 md:h-full min-h-[65vh] sm:w-[80vw] md:w-full">
   {/* Background Grid Overlay */}
     {/* <div className="absolute inset-0 -z-10">
       <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800/20 opacity-40" />
