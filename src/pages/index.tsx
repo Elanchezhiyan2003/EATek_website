@@ -11,6 +11,9 @@ import { CTABanner } from '@/components/sections/CTABanner';
 import WhoWeAre from '@/components/sections/Whoweare';
 import Services from '@/components/sections/Services';
 import FAQ from '@/components/sections/FAQ';
+import LogoLoop from '@/components/LogoLoop';
+import FavouriteTools from '@/components/sections/FavouriteTools';
+import { TestimonialsStack } from '@/components/sections/TestimonialsStack';
 
 export default function Home() {
   return (
@@ -23,10 +26,13 @@ export default function Home() {
       <WhyEAtek />
       {/* <Offerings /> */}
       {/* <ProgramsFellowships /> */}
-      <CommunityImpact />
+      <TestimonialsStack />
+      {/* <CommunityImpact /> */}
+      <FavouriteTools />
       {/* <TeamHighlight /> */}
       {/* <BlogInsights /> */}
       <FAQ />
+      {/* <LogoLoop/> */}
       <CTABanner />
     </div>
   );

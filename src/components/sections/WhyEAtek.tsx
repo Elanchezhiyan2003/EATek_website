@@ -112,7 +112,7 @@ export function WhyEAtek() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.25, 0, 1],
+        ease: [0.4, 0, 0.2, 1],
       },
     },
   };
@@ -160,7 +160,7 @@ export function WhyEAtek() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+          {/* <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {stats.map((stat) => (
               <motion.div
                 key={stat.label}
@@ -183,7 +183,7 @@ export function WhyEAtek() {
                 <div className="mt-2 text-sm text-muted-foreground">{stat.label}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Features */}
