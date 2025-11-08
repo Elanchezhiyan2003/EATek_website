@@ -102,7 +102,7 @@ export function Hero() {
       {/* 🧭 Content Wrapper */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
         <motion.div
-          className="py-20 sm:py-24 md:py-28 flex flex-col items-center justify-center"
+          className="py-2 sm:py-24 md:py-28 flex flex-col items-center justify-center"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
