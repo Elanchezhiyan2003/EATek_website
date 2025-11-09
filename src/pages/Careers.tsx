@@ -205,7 +205,7 @@ export default function Careers() {
     <div className="min-h-screen">
       {/* Hero Section */}
       {/* <section className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-purple-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950/20"> */}
-      <section className="relative overflow-hidden sm:py-4 py-6 md:py-0  md:h-full min-h-[60vh] sm:w-[90vw] md:w-full flex items-center bg-gradient-to-br from-slate-50 via-white to-purple-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950/20">
+      <section className="relative overflow-hidden sm:py-4 py-10 md:py-0  md:h-full min-h-[60vh] sm:w-[90vw] md:w-full flex items-center bg-gradient-to-br from-slate-50 via-white to-purple-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-purple-950/20">
         {/* Modern background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
         
