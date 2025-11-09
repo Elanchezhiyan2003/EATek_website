@@ -738,7 +738,8 @@ export default function About() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent mb-4">
-              Meet the Founder
+              {/* Meet the Founder */}
+              Meet Our Founder
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
               The visionary behind EAtek's mission to bridge technology, creativity, and education
