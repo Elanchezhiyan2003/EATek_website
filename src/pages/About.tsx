@@ -405,7 +405,7 @@ export default function About() {
   colors={["#00C6FF", "#8A2BE2", "#FF00FF", "#FF2E63", "#FF8C00"]}
   animationSpeed={3}
   showBorder={false}
-  className="custom-class text-2xl py-4 text-center sm:text-xl md:text-3xl font-extrabold font-poppins w-[70%] mx-auto"
+  className="custom-class text-2xl py-8 text-center sm:text-xl md:text-3xl font-extrabold font-poppins w-[70%] mx-auto"
 >
   Where creativity, learning, and technology converge to build ecosystems that move both the mind and the heart.
 </GradientText>
