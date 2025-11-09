@@ -220,7 +220,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mx-auto mt-8 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+              className="mx-auto mt-14 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
             >
               Whether you're a learner, creator, or business — EAtek is always open for collaboration.
               Great ideas grow faster when shared. This isn't just a contact page — it's an open door to meaningful conversations.
