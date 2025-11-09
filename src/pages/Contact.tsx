@@ -220,7 +220,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mx-auto mt-8 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+              className="mx-auto mt-4 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
             >
               Whether you're a learner, creator, or business — EAtek is always open for collaboration.
               Great ideas grow faster when shared. This isn't just a contact page — it's an open door to meaningful conversations.
@@ -230,7 +230,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 flex items-center justify-center gap-4 flex-wrap"
+              className="mt-8 flex items-center justify-center gap-4 flex-wrap"
             >
               <motion.div whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-6 text-base font-semibold rounded-xl"
@@ -263,10 +263,10 @@ export default function Contact() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-8 text-center"
+              className="mt-4 text-center"
             >
               <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
-                👉 Contact isn't the end — it's the beginning of collaboration.
+                Contact isn't the end — it's the beginning of collaboration.
               </p>
             </motion.div>
           </div>
