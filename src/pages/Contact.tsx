@@ -191,7 +191,7 @@ export default function Contact() {
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="relative py-8 sm:py-26 text-center">
+          <div className="relative -mt-14 py-8 sm:py-26 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -211,7 +211,7 @@ export default function Contact() {
               className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight"
             >
               <span className="block text-slate-900 dark:text-slate-50">Let's Build</span>
-              <span className="block mt-2 bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="block mt-4 mb-4 bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Together
               </span>
             </motion.h1>
