@@ -419,7 +419,7 @@ export default function Contact() {
                             <p className="text-sm text-slate-600 dark:text-slate-400 mb-1">{method.description}</p>
                             <a
                               href={method.action}
-                              className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
+                              className="text-sm font-medium text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors no-underline"
                             >
                               {method.value}
                             </a>
