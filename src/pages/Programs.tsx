@@ -230,7 +230,8 @@ export default function Programs() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/20">
+      {/* <section className="relative overflow-hidden min-h-screen flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/20"> */}
+      <section className="relative py-18  md:h-full min-h-[65vh] sm:w-[90vw] md:w-full flex items-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/20">
         {/* Modern background grid */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
         
@@ -241,15 +242,15 @@ export default function Programs() {
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-12 md:py-2 relative z-10">
-          <div className="relative py-24 sm:py-32 text-center">
+          <div className="relative py-2 sm:py-22 -mt-14 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 mb-2 rounded-full bg-slate-100/80 dark:bg-slate-800/80 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/50"
             >
               <GraduationCap className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+              <span className="text-sm  font-medium text-slate-700 dark:text-slate-300">
               Empowering the Next Generation
               </span>
             </motion.div>
@@ -270,7 +271,7 @@ export default function Programs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mx-auto mt-8 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+              className="mx-auto mt-6 max-w-3xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
             >
               A transformative journey for 9th–12th grade students, freshers, and passionate learners. 
               Bridge the gap between learning and real-world building through mentorship, community, and hands-on experience.
@@ -280,7 +281,7 @@ export default function Programs() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 flex items-center justify-center gap-4 flex-wrap"
+              className="mt-2 flex items-center justify-center gap-2 flex-wrap"
             >
               {/* <motion.div whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}>
                 <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 px-8 py-6 text-base font-semibold rounded-xl">
@@ -299,7 +300,7 @@ export default function Programs() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-8 text-center"
+              className="mt-4 text-center"
             >
               <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
                 💡 Beyond the Binary isn't just a tagline — it's a journey you live.

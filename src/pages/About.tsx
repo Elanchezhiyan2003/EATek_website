@@ -332,7 +332,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 py-24 lg:py-[23%] sm:py-46 md:py-[14%]  overflow-hidden">
+<section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950  py-[21%] md:py-[14%]  overflow-hidden">
 {/* <section className="relative bg-gradient-to-br from-blue-50 via-indigo-100 to-indigo-200 dark:from-slate-900 dark:via-slate-950 dark:to-blue-950 overflow-hidden py-40 sm:py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24  z-0 top-0 md:h-full min-h-screen sm:w-[90vw] md:w-full"> */}
   {/* Background Grid Overlay */}
     {/* <div className="absolute inset-0 -z-10">
@@ -343,7 +343,7 @@ export default function About() {
   <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center space-y-10 h-60">
 
     {/* Heading */}
-    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
+    <h2 className="text-4xl sm:text-5xl md:text-6xl  lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white">
       <SplitText
         text="About "
         className="inline-block text-gray-900 dark:text-white"
@@ -373,7 +373,7 @@ export default function About() {
     </h2>
 
     {/* Subheading / Tagline */}
-    <p className="text-2xl sm:text-3xl font-semibold text-gray-800 dark:text-gray-100">
+    <p className="text-2xl sm:text-3xl  font-semibold text-gray-800 dark:text-gray-100">
       <TrueFocus
         sentence="Architecting the Soulful Economy"
         manualMode={false}
@@ -405,7 +405,7 @@ export default function About() {
   colors={["#00C6FF", "#8A2BE2", "#FF00FF", "#FF2E63", "#FF8C00"]}
   animationSpeed={3}
   showBorder={false}
-  className="custom-class text-2xl text-center sm:text-xl md:text-3xl font-extrabold font-poppins w-[70%] mx-auto"
+  className="custom-class text-2xl py-4 text-center sm:text-xl md:text-3xl font-extrabold font-poppins w-[70%] mx-auto"
 >
   Where creativity, learning, and technology converge to build ecosystems that move both the mind and the heart.
 </GradientText>
