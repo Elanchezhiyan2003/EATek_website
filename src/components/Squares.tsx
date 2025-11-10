@@ -28,6 +28,7 @@ const Squares: React.FC<SquaresProps> = ({
   const numSquaresY = useRef<number>(0);
   const gridOffset = useRef<GridOffset>({ x: 0, y: 0 });
   const hoveredSquareRef = useRef<GridOffset | null>(null);
+  const mouseMoveTickingRef = useRef<boolean>(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -114,22 +115,29 @@ const Squares: React.FC<SquaresProps> = ({
     };
 
     const handleMouseMove = (event: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      const mouseX = event.clientX - rect.left;
-      const mouseY = event.clientY - rect.top;
+      if (!mouseMoveTickingRef.current) {
+        window.requestAnimationFrame(() => {
+          mouseMoveTickingRef.current = false;
+          
+          const rect = canvas.getBoundingClientRect();
+          const mouseX = event.clientX - rect.left;
+          const mouseY = event.clientY - rect.top;
 
-      const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
-      const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
+          const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize;
+          const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize;
 
-      const hoveredSquareX = Math.floor((mouseX + gridOffset.current.x - startX) / squareSize);
-      const hoveredSquareY = Math.floor((mouseY + gridOffset.current.y - startY) / squareSize);
+          const hoveredSquareX = Math.floor((mouseX + gridOffset.current.x - startX) / squareSize);
+          const hoveredSquareY = Math.floor((mouseY + gridOffset.current.y - startY) / squareSize);
 
-      if (
-        !hoveredSquareRef.current ||
-        hoveredSquareRef.current.x !== hoveredSquareX ||
-        hoveredSquareRef.current.y !== hoveredSquareY
-      ) {
-        hoveredSquareRef.current = { x: hoveredSquareX, y: hoveredSquareY };
+          if (
+            !hoveredSquareRef.current ||
+            hoveredSquareRef.current.x !== hoveredSquareX ||
+            hoveredSquareRef.current.y !== hoveredSquareY
+          ) {
+            hoveredSquareRef.current = { x: hoveredSquareX, y: hoveredSquareY };
+          }
+        });
+        mouseMoveTickingRef.current = true;
       }
     };
 
@@ -137,8 +145,8 @@ const Squares: React.FC<SquaresProps> = ({
       hoveredSquareRef.current = null;
     };
 
-    canvas.addEventListener('mousemove', handleMouseMove);
-    canvas.addEventListener('mouseleave', handleMouseLeave);
+    canvas.addEventListener('mousemove', handleMouseMove, { passive: true });
+    canvas.addEventListener('mouseleave', handleMouseLeave, { passive: true });
     requestRef.current = requestAnimationFrame(updateAnimation);
 
     return () => {
