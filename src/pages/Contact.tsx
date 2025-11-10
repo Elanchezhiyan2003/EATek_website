@@ -31,9 +31,9 @@ const contactMethods = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'info@EATek.in',
+    value: 'info@eatek.in',
     description: 'Drop us a line anytime',
-    action: 'mailto:info@EATek.in',
+    action: 'mailto:info@EA.in',
     color: 'from-blue-500 to-cyan-500',
   },
   {
@@ -630,13 +630,13 @@ export default function Contact() {
                 <div className="flex gap-2">
                   <Input
                     type="email"
-                    value="info@EATek.in"
+                    value="info@eatek.in"
                     readOnly
                     className="flex-1 rounded-lg text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 cursor-default"
                   />
                   <Button
                     className="bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 rounded-lg shadow-lg"
-                    onClick={() => window.open('mailto:info@EATek.in')}
+                    onClick={() => window.open('mailto:info@eatek.in')}
                   >
                     Subscribe
                   </Button>
@@ -703,7 +703,7 @@ export default function Contact() {
                 <motion.div whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }}>
                   <Button
                     size="lg"
-                    onClick={() => window.open('mailto:info@EATek.in')}
+                    onClick={() => window.open('mailto:info@eatek.in')}
                     className="bg-white text-slate-900 hover:bg-slate-100 font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl"
                   >
                     <Mail className="mr-2 h-5 w-5" />

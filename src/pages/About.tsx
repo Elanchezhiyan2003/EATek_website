@@ -223,13 +223,13 @@ const frameworkElements = [
 
 const milestones = [
   {
-    year: '2024',
+    year: '2025',
     title: 'Foundation',
     description: 'EATek founded by Elanchezhiyan Mahendiran with the vision "Beyond the Binary"',
     status: 'completed',
   },
   {
-    year: '2024-25',
+    year: '2025',
     title: 'Fellowship Launch',
     description: 'Launched ELAN 20\' BuildVerse Fellowship, training school & college learners',
     status: 'completed',
