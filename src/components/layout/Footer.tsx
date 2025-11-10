@@ -251,7 +251,7 @@ export function Footer() {
             {/* Contact Info Cards */}
             <div className="space-y-3">
               <motion.a
-                  href="mailto:info@EATek.in"
+                  href="mailto:info@eatek.in"
                 whileHover={{ x: 4 }}
                 className="group flex items-center space-x-3 p-3 rounded-lg bg-slate-900/50 border border-slate-800/50 hover:border-blue-500/50 hover:bg-slate-900/80 transition-all duration-300 no-underline"
               >
@@ -260,7 +260,7 @@ export function Footer() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="text-xs text-slate-500 mb-0.5">Email</div>
-          <div className="text-sm text-slate-300 group-hover:text-white transition-colors break-all">info@EATek.in</div>
+          <div className="text-sm text-slate-300 group-hover:text-white transition-colors break-all">info@eatek.in</div>
               </div>
               </motion.a>
               
